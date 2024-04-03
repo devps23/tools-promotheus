@@ -23,7 +23,7 @@ pipelines:
           test-job:
             timeout: 0
             tasks:
-            - exec: { command: ansible-playbook,  arguments: ["-i","172.31.3.3","-e","ansible_user=ec2-user",
+            - exec: { command: ansible-playbook,  arguments: ["-i","172.31.95.147","-e","ansible_user=ec2-user",
             "-e","ansible_password=DevOps321","-e","tools_name=tools","tools.yml"] , run_if: passed }
 
 
