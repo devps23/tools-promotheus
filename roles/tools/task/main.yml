@@ -7,3 +7,4 @@
   ansible.builtin.unarchive:
     src: /opt
     dest: /opt
+    remote_src: yes
