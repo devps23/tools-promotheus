@@ -1,5 +1,5 @@
 - name: "Promothesus"
-  hosts:
+  hosts: localhost
   become: yes
   roles:
     - "{{ tools_name }}"
