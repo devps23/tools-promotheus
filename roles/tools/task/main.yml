@@ -1,10 +1,10 @@
 - name: Download prometheus
   ansible.builtin.get_url:
     url: https://github.com/prometheus/prometheus/releases/download/v2.51.1/prometheus-2.51.1.linux-amd64.tar.gz
-    dest: /opt
+    dest: /tmp
 
 - name: unarchive prometheus
   ansible.builtin.unarchive:
-    src: /opt
+    src: /tmp
     dest: /opt
     remote_src: yes
