@@ -3,6 +3,7 @@
     src: https://github.com/prometheus/prometheus/releases/download/{{ version }}/prometheus-{{ version }}.linux-amd64.tar.gz
     dest: /opt
     remote_src: yes
+      ignore_errors: true
 
 
 - name: copy prometheus service
@@ -11,11 +12,11 @@
     dest: /etc/systemd/system/prometheus.service
 
 
-- name: start prometheus service
-  ansible.builtin.systemd_service:
-    state: restarted
-    enabled: yes
-    daemon_reload: true
+#- name: start prometheus service
+#  ansible.builtin.systemd_service:
+#    state: restarted
+#    enabled: yes
+#    daemon_reload: true
 
 #- name: unarchive prometheus
 #  ansible.builtin.unarchive:
