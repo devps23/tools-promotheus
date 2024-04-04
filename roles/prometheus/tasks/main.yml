@@ -12,11 +12,11 @@
     dest: /etc/systemd/system/prometheus.service
 
 
-#- name: start prometheus service
-#  ansible.builtin.systemd_service:
-#    state: restarted
-#    enabled: yes
-#    daemon_reload: true
+- name: start prometheus service
+  ansible.builtin.systemd_service:
+    state: restarted
+    enabled: yes
+    daemon_reload: true
 
 #- name: unarchive prometheus
 #  ansible.builtin.unarchive:
