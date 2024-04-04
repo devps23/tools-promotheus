@@ -1,4 +1,23 @@
 to run the service in specific working directory(means current directory to specific directory)
-Ex:once start service some where files are stored but not in specific directory
+Ex:once started service some where files are stored but not in specific directory(like prometheus)
 so add "WorkingDirectory=/usr/local" in service file
+in this file
+WorkingDirectory=/opt/prometheus-{{ version }}.linux-amd64
+go and check in linux server whether service started or not
+suppose we get permisssion denied error : means the Prometheus uanrchive is under ec2-user owner.so here user is bin.
+under bin ,service is running.so change the owner from ec2-user to bin
+manually do in server:
+======================
+chown bin(user):bin(group) /opt/prometheus-{{ version }}.linux-amd64
+
+through automation , to change ownership use below
+"owner:bin" ---to change current user to bin user
+these permisions allow in unarchive module.
+
+Note:to run the service under the specific tool only
+
+prometheus is a tool to run the service under prometheus only so add "WorkingDirectory=/opt/prometheus-{{ version }}.linux-amd64"
+in service file
+
+
 
