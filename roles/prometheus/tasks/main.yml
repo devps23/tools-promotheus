@@ -3,7 +3,7 @@
     src: https://github.com/prometheus/prometheus/releases/download/{{ version }}/prometheus-{{ version }}.linux-amd64.tar.gz
     dest: /opt
     remote_src: yes
-      ignore_errors: true
+  ignore_errors: true
 
 
 - name: copy prometheus service
