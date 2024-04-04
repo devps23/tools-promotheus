@@ -1,0 +1,4 @@
+to run the service in specific working directory(means current directory to specific directory)
+Ex:once start service some where files are stored but not in specific directory
+so add "WorkingDirectory=/usr/local" in service file
+
